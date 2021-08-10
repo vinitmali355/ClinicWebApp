@@ -8,8 +8,63 @@
 <body>
     <!-- header section -->
     <header>
-        <nav></nav>
-    </header>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+          <a href="#" class="navbar-brand h1">&nbsp;&nbsp;My Clinic</a>
+          <div class="container-fluid">
+            <button 
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="toggle navigation"
+            ><span class="navbar-toggler-icon"></span>
+          </button>
+            <div id="navbar" class="collapse navbar-collapse">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Book Apointment</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a 
+                  class="nav-link dropdown-toggle" 
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  My Account</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a class="dropdown-item" href="#">Log In</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sign Up</a>
+                  </li>
+                </ul>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control m-0"
+                type="search"
+                placeholder="search"
+                aria-label="search"/>&nbsp;
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
     <!-- main section -->
     <main>  
         <!-- slider -->
