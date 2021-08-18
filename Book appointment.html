@@ -1,0 +1,431 @@
+<html>
+<head>
+    <title>Book Appointment clinic webapp</title>
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- font awesome -->
+    <link href="fontawesome\fontawesome-free-5.15.4-web\css\all.css" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: #28DF99;">
+    
+    <!-- header section -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <img src="undraw\undraw_doctors_hwty.svg" alt="" width="70" height="70" class="d-inline-block text-center">
+            <a href="index.html" class="navbar-brand h1"
+                >&nbsp;&nbsp;HEALTH CARE
+            </a>
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbar"
+                aria-controls="navbar"
+                aria-expanded="false"
+                aria-lable="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"
+                            >Home</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="About us.html"
+                            >About us</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Contact Us.html"
+                            >Contact us</a
+                        >
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-info" href="Book appointment.html"
+                            >Book appointment</a
+                        >
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown"
+                            role="button"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false"
+                        >
+                            My Account
+                        </a>
+                        <ul
+                            class="dropdown-menu"
+                            aria-labelledby="navbarDropdown"
+                        >
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#loginModal"
+                                    >Log in</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    class="dropdown-item"
+                                    href="#"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#signupModal"
+                                    >Sign up</a
+                                >
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input
+                        class="form-control me-2"
+                        type="search"
+                        placeholder="Search"
+                        aria-label="Search"
+                    />
+                    <button
+                        class="btn btn-outline-primary"
+                        type="submit"
+                    >
+                        Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+        
+      </header>
+    <!-- main section -->
+    <main class="m-5">
+      <div class="row">
+          <!-- user info -->
+          <div class="col-12 col-lg-4 p-3 border">
+              <div>
+                  <h5>User Information</h5>
+              </div>
+
+              <hr />
+              <div class="mb-3 row">
+                  <label for="staticEmail" class="col-sm-3 col-form-label"
+                      >Name</label
+                  >
+                  <div class="col-sm-9">
+                      <input
+                          type="text"
+                          class="form-control"
+                          id="staticEmail"
+                          value="FirstName LastName"
+                      />
+                  </div>
+              </div>
+              <div class="mb-3 row">
+                  <label for="staticEmail" class="col-sm-3 col-form-label"
+                      >Contact No.</label
+                  >
+                  <div class="col-sm-9">
+                      <input
+                          type="text"
+                          class="form-control"
+                          id="staticEmail"
+                          value="+91 1234567890"
+                      />
+                  </div>
+              </div>
+              <div class="mb-3 row">
+                  <label for="staticEmail" class="col-sm-3 col-form-label"
+                      >Email</label
+                  >
+                  <div class="col-sm-9">
+                      <input
+                          type="text"
+                          class="form-control"
+                          id="staticEmail"
+                          value="email@example.com"
+                      />
+                  </div>
+              </div>
+              <div class="mb-3">
+                  <label
+                      for="exampleFormControlTextarea1"
+                      class="form-label"
+                      >Address</label
+                  >
+                  <textarea
+                      class="form-control"
+                      id="exampleFormControlTextarea1"
+                      rows="3"
+                  ></textarea>
+              </div>
+          </div>
+
+          <!-- appointment list -->
+          <div class="col-12 col-lg-8 p-3 border">
+              <div class="clearfix">
+                  <h4 class="float-start">Appointment List</h4>
+                  <button class="btn btn-primary float-end">
+                      create new appointment
+                  </button>
+              </div>
+              <hr />
+              <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                          <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="false"
+                              aria-controls="collapseOne"
+                          >
+                              Appointment No: #01
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <span class="badge bg-primary"
+                                  >2021-08-12</span
+                              >&nbsp;&nbsp;<span class="badge bg-success"
+                                  >booked</span
+                              >
+                          </button>
+                      </h2>
+                      <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#accordionExample"
+                      >
+                          <div class="accordion-body">
+                              <div class="row">
+                                  <div class="col-12 col-lg-6">
+                                      <p>Appointment Date: 2021-08-12</p>
+                                  </div>
+                                  <div class="col-12 col-lg-6">
+                                      Appointment Status:
+                                      <span class="badge bg-success"
+                                          >booked</span
+                                      >
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-12 col-lg-6">
+                                      <p>Estimated Time: 03:00 PM</p>
+                                  </div>
+                                  <div class="col-12 col-lg-6">
+                                      Appointment Reason: casual appointment 
+                                  </div>
+                              </div>
+                              <hr />
+                              <button class="btn btn-sm btn-danger">
+                                  cancel
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                          <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="false"
+                              aria-controls="collapseOne"
+                          >
+                              Appointment No: #02
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <span class="badge bg-primary"
+                                  >2021-08-12</span
+                              >&nbsp;&nbsp;<span class="badge bg-success"
+                                  >booked</span
+                              >
+                          </button>
+                      </h2>
+                      <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#accordionExample"
+                      >
+                          <div class="accordion-body">
+                              <div class="row">
+                                  <div class="col-12 col-lg-6">
+                                      <p>Appointment Date: 2021-08-12</p>
+                                  </div>
+                                  <div class="col-12 col-lg-6">
+                                      Appointment Status:
+                                      <span class="badge bg-success"
+                                          >booked</span
+                                      >
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-12 col-lg-6">
+                                      <p>Estimated Time: 03:00 PM</p>
+                                  </div>
+                                  <div class="col-12 col-lg-6">
+                                      Appointment Reason: This is sample
+                                      appointment reason
+                                  </div>
+                              </div>
+                              <hr />
+                              <button class="btn btn-sm btn-danger">
+                                  cancel
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                          <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="false"
+                              aria-controls="collapseOne"
+                          >
+                              Appointment No: #03
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <span class="badge bg-primary"
+                                  >2021-08-12</span
+                              >&nbsp;&nbsp;<span class="badge bg-success"
+                                  >booked</span
+                              >
+                          </button>
+                      </h2>
+                      <div
+                          id="collapseOne"
+                          class="accordion-collapse collapse show"
+                          aria-labelledby="headingOne"
+                          data-bs-parent="#accordionExample"
+                      >
+                          <div class="accordion-body">
+                              <div class="row">
+                                  <div class="col-12 col-lg-6">
+                                      <p>Appointment Date: 2021-08-12</p>
+                                  </div>
+                                  <div class="col-12 col-lg-6">
+                                      Appointment Status:
+                                      <span class="badge bg-success"
+                                          >booked</span
+                                      >
+                                  </div>
+                              </div>
+                              <div class="row">
+                                  <div class="col-12 col-lg-6">
+                                      <p>Estimated Time: 03:00 PM</p>
+                                  </div>
+                                  <div class="col-12 col-lg-6">
+                                      Appointment Reason:sample appointment
+                                  </div>
+                              </div>
+                              <hr />
+                              <button class="btn btn-sm btn-danger">
+                                  cancel
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </main>
+    <!-- footer -->
+    <footer style="background-color: #343a40">
+  <section>
+    <div class="row pt-5 px-5">
+      <div class="col">
+        <h5 class="text-white">Heading 1</h5>
+        <ul>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 1</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 2</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 3</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h5 class="text-white">Heading 1</h5>
+        <ul>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 1</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 2</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 3</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h5 class="text-white">Heading 1</h5>
+        <ul>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 1</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 2</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 3</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col">
+        <h5 class="text-white">Heading 1</h5>
+        <ul>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 1</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 2</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 3</a>
+          </li>
+          <li class="list-unstyled">
+            <a href="#" class="text-decoration-none text-white">link 4</a>
+          </li>
+        </ul>
+      </div>
+      <div class="py-3 px-3" style="background-color: #28292b">
+        <span class="text-white">copyright web dev batch</span>
+    </div>
+  </section>      
+    </footer>
+</body>
+<!-- script section -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</html>
+
